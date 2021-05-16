@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body onload="draw()">
+    <canvas id="sketch" width="300" height="300"> </canvas>
+    <script>
+        function draw() {
+            var sketch = document.getElementById('sketch');
+            var context = sketch.getContext("2d");
+
+            var userString = prompt("how may pairs u want? ");
+            var userNum = parseInt(userString);
+            var thisMany = userNum * 2 - 1;
+
+            for (var i = 0; i <= thisMany; i++) {
+                if (i % 2 == 0) {
+                    //even numbers, green squares
+                    context.fillStyle = "#00ff00";
+                    context.fillRect((i * 25), 20, 20, 20);
+                }
+                else {//odd numbers, blue circles
+                    context.fillStyle = "#0000ff";
+                    context.beginPath();
+                    context.arc((i*25 + 10), 30, 10, 0, 2 * Math.PI, true);
+                    context.closePath();
+                    context.fill();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

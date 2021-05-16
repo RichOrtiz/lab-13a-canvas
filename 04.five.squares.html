@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+</head>
+<body onload="draw()">
+    <canvas id="sketch" width="300" height="300"> </canvas>
+    <script>
+        function draw() {
+            /*function first() {
+                for (var i = 0; i <= 4; i++) {
+                    //x,y,height,width
+
+                    context.fillRect((i * 40), 0, 20, 20);
+                }
+            }
+            function second() {
+                for (var i = 0; i <= 3; i++) {
+                    context.fillRect((i * 40) + 20, 20, 20, 20);
+                }
+            }*/
+            height = 100;
+            var sketch = document.getElementById('sketch');
+            var context = sketch.getContext("2d");
+
+            context.fillstyle = "#000000";
+
+            for (var i = 0; i <= 4; i++) {
+                //x,y,height,width
+
+                context.fillRect((i*40), 0, 20, 20);
+            }
+            for (var i = 0; i <= 3; i++) {
+                context.fillRect((i * 40)+20, 20, 20, 20);
+            }
+            for (var i = 0; i <= 4; i++) {
+                //x,y,height,width
+
+                context.fillRect((i * 40), 40, 20, 20);
+            }
+            for (var i = 0; i <= 3; i++) {
+                context.fillRect((i * 40) + 20, 60, 20, 20);
+            }
+            for (var i = 0; i <= 4; i++) {
+                //x,y,height,width
+
+                context.fillRect((i * 40), 80, 20, 20);
+            }
+            for (var i = 0; i <= 3; i++) {
+                context.fillRect((i * 40) + 20, 100, 20, 20);
+            }
+            for (var i = 0; i <= 4; i++) {
+                //x,y,height,width
+
+                context.fillRect((i * 40), 120, 20, 20);
+            }
+            for (var i = 0; i <= 3; i++) {
+                context.fillRect((i * 40) + 20, 140, 20, 20);
+            }
+
+        }
+    </script>
+</body>
+</html>
